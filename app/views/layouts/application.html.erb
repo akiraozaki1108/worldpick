@@ -3,6 +3,9 @@
   <head>
     <title>Pictweet</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <script type="text/javascript">
@@ -50,7 +53,8 @@
     <% else %>
       <div class="main">
         <div class="main-contents">
-          <%= image_tag 'logo.png', class: "logo" %>
+        <%= image_tag 'logo.png', class: "tada" %>>
+        
           <p>Let's take a picture of the world!!!!!!
           </p>
         </div>
@@ -66,10 +70,7 @@
 
     <footer>
       <p>
-        World Pick 2020.ああああああ
-        ffeefefefe
-        evevevww
-        
+        World Pick 2020.
       </p>
     </footer>
   </body>

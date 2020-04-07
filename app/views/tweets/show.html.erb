@@ -13,13 +13,26 @@
         </ul>
       </div>
     <% end %>
-    <%= simple_format(@tweet.text) %>
+    
     <span class="name">
       <a href="/users/<%= @tweet.user.id %>">
         <span>投稿者</span><%= @tweet.user.nickname %>
       </a>
     </span>
   </div>
+  <% if Like.find_by(user_id: current_user.id, tweet_id: @tweet.id) %>
+        <%= link_to("/likes/#{@tweet.id}/destroy", {method: "post"}) do %>
+        <span class="fa fa-heart like-btn-unlike"></span>
+          <% end %>
+      <% else %>
+        <%= link_to("/likes/#{@tweet.id}/create", {method: "post"}) do %>
+          <span class="fa fa-heart like-btn"></span>
+        <% end %>
+      <% end %>
+      <%= @likes_count %>
+  <div class="box18">
+    <%= simple_format(@tweet.text) %>
+</div>
   <div class="container">
     <% if current_user %>
       <%= form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form| %> 
@@ -28,6 +41,7 @@
 <% end %>
     
     <% end %>
+    
     <div class="comments">
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>

@@ -33,7 +33,14 @@ $(function(){
   })
 })
 
-
+$('#sample-animate-hover').hover(
+  function(){
+    $('#sample-animate-hover').addClass('animated infinite rubberBand');
+  },
+  function () {
+    $('#sample-animate-hover').removeClass();
+  }
+);
 
 
 

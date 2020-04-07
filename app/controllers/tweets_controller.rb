@@ -31,6 +31,7 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
     @comment = Comment.new
     @comments = @tweet.comments.includes(:user)
+    @likes_count = Like.where(tweet_id: @tweetお.id).count
   end
 
   private

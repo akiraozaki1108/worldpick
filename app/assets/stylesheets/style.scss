@@ -15,7 +15,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Unica+One);
 
-$accent: #57C3E9;
+$accent: rgb(150, 129, 129);
 $black: #292929;
 $dark: #666;
 $darkGray: #999999;
@@ -40,6 +40,7 @@ $white: white;
 body,html {
   height: 100%;
   background-color: $lightGray;
+  
 }
 
 body {
@@ -120,8 +121,8 @@ h1,h2,h3,h4,h5,h6 {
 
 header.header {
   @include basePadding;
-  border-bottom: 1px solid purple;
-  background-color: orangered;
+  border-bottom: 2px solid $gray;
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -283,18 +284,7 @@ div.contents.row {
         }
       }
     }
-    p {
-      @extend .serif;
-      position: absolute;
-      left: 30px;
-      right: 100px;
-      bottom: 30px;
-      margin: 0;
-      font-size: 20px;
-      z-index: 2;
-      font-weight: bold;
-      text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
-    }
+    
     span.name {
       position: absolute;
       right: 30px;
@@ -315,6 +305,7 @@ div.contents.row {
       }
     }
   }
+ 
   .success {
     @include boxBase(20px 0 ,30px);
     box-shadow: 0 0 10px rgba($black,0.2);
@@ -503,4 +494,74 @@ footer {
 
 .thumbnail ul li img {
   width: 100%;
+}
+
+
+.box18{
+  margin:2em 0;
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px #ffcb8a;
+  border-radius: 3px 0 3px 0;
+  background-color: white;
+}
+.box18:before,.box18:after
+{
+  content: '';
+  position: absolute;
+  width:10px;
+  height: 10px;
+  border: solid 2px #ffcb8a;
+  border-radius: 50%;
+}
+.box18:after {
+  top:-12px;
+  left:-12px;
+}
+.box18:before {
+  bottom:-12px;
+  right:-12px;
+}
+.box18 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.like-btn {
+  color: #8899a6;
+}
+
+
+.like-btn-unlike {
+  color: #ff2581;
+}
+
+
+.tweets-show-item .fa {
+  z-index: 5;
+  font-size: 18px;
+  margin-right: 3px;
+}
+
+.wrench {
+  animation: wrench_7909 3.875s ease infinite;
+  transform-origin: 90% 35%;
+}
+
+.tada {
+  animation: tada_3743 4.6s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes tada_3743 {
+  0% { transform: scale(1) }
+  4.34783% { transform:scale(.9) rotate(-8deg) }
+  8.69565% { transform:scale(.9) rotate(-8deg) }
+  13.04348% { transform:scale(1.3) rotate(8deg) }
+  17.3913% { transform:scale(1.3) rotate(-8deg) }
+  21.73913% { transform:scale(1.3) rotate(8deg) }
+  26.08696% { transform:scale(1.3) rotate(-8deg) }
+  30.43478% { transform:scale(1.3) rotate(8deg) }
+  34.78261% { transform:scale(1) rotate(0) }
+  100% { transform:scale(1) rotate(0) }
 }
