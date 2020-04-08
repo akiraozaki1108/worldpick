@@ -15,7 +15,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Unica+One);
 
-$accent: #57C3E9;
+$accent: rgb(150, 129, 129);
 $black: #292929;
 $dark: #666;
 $darkGray: #999999;
@@ -40,6 +40,7 @@ $white: white;
 body,html {
   height: 100%;
   background-color: $lightGray;
+  
 }
 
 body {
@@ -120,7 +121,7 @@ h1,h2,h3,h4,h5,h6 {
 
 header.header {
   @include basePadding;
-  border-bottom: 1px solid $gray;
+  border-bottom: 2px solid $gray;
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -210,18 +211,6 @@ header.header {
     right: 0;
   }
 }
-
-
-
-
-
-
-
-
-//index部分
-
-
-
 div.contents.row {
   h2 {
     @include boxBase(20px 0, 0);
@@ -238,145 +227,6 @@ div.contents.row {
   div.content_post {
     @include boxBase(20px 0 ,30px);
     position: relative;
-    height: 200px;
-    width: 200px;
-    color: #fff;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 3px;
-    box-shadow: 0 0 10px rgba($black,0.2);
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      @include filter-gradient(#000000, #a60000, vertical);
-      @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
-      z-index: 1;
-      border-radius: 3px;
-    }
-    .more {
-      position: absolute;
-      cursor: pointer;
-      top: 20px;
-      right: 30px;
-      z-index: 2;
-      height: 100px;
-      width: 80px;
-      text-align: right;
-      &:hover ul.more_list {
-        display: block;
-      }
-      ul.more_list {
-        position: absolute;
-        text-align: left;
-        width: 80px;
-        right: 0;
-        font-size: 12px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        display: none;
-        box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        border-radius: 3px;
-        li {
-          border-bottom: 1px solid #ddd;
-          &:last-child {
-            border-bottom: 0;
-          }
-          a {
-            display: block;
-            padding: 5px;
-            &:hover {
-              background-color: $accent;
-              color: #fff;
-            }
-          }
-        }
-      }
-    }
-    p {
-      @extend .serif;
-      position: absolute;
-      left: 30px;
-      right: 100px;
-      bottom: 30px;
-      margin: 0;
-      font-size: 20px;
-      z-index: 2;
-      font-weight: bold;
-      text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
-    }
-    span.name {
-      position: absolute;
-      right: 30px;
-      bottom: 30px;
-      z-index: 2;
-      font-size: 13px;
-      a {
-        display: block;
-        color: #aaa;
-        &:hover {
-          text-decoration: underline;
-          color: #aaa;
-        }
-      }
-      span {
-        font-size: 9px;
-        display: block;
-      }
-    }
-  }
-  .success {
-    @include boxBase(20px 0 ,30px);
-    box-shadow: 0 0 10px rgba($black,0.2);
-    background-color: $white;
-    box-sizing: border-box;
-    text-align: center;
-    h3 {
-      @include baseMargin;
-    }
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//個人ページ部分
-
-div.contents.show {
-  h2 {
-    @include boxBase(20px 0, 0);
-    font-weight: normal;
-    strong {
-      font-weight: bold;
-      padding-right: 5px;
-      font-size: 1.2em;
-    }
-  }
-  .new_user{
-  font-family: "游ゴシック", "YuGothic";
-  }
-  div.content_post_show {
-    @include boxBase(20px 0 ,30px);
-    position: relative;
-    margin-left: 200px;
-    margin-right: 200px;
     height: 400px;
     color: #fff;
     background-size: cover;
@@ -434,18 +284,7 @@ div.contents.show {
         }
       }
     }
-    p {
-      @extend .serif;
-      position: absolute;
-      left: 30px;
-      right: 100px;
-      bottom: 30px;
-      margin: 0;
-      font-size: 20px;
-      z-index: 2;
-      font-weight: bold;
-      text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
-    }
+    
     span.name {
       position: absolute;
       right: 30px;
@@ -466,6 +305,7 @@ div.contents.show {
       }
     }
   }
+ 
   .success {
     @include boxBase(20px 0 ,30px);
     box-shadow: 0 0 10px rgba($black,0.2);
@@ -477,10 +317,6 @@ div.contents.show {
     }
   }
 }
-
-
-
-
 form {
   h3 {
     @include baseMargin(0 0 20px);
@@ -513,9 +349,6 @@ form {
   box-shadow: 0 0 10px rgba($black,0.2);
   background-color: $white;
   box-sizing: border-box;
-  margin-left: 100px;
-  margin-top: 30px; 
-  margin-right: 100px;
 }
 .comments {
   padding: 5px;
@@ -547,4 +380,188 @@ footer {
   .search-btn {
     width: 10%;
   }
+}
+
+
+
+//ロロ部分
+
+.main {
+  &-contents {
+    //position: relative;
+    text-align: center;
+    .logo {
+    }
+    p {
+      
+    }
+  }
+
+}
+
+
+
+.slider {
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+  vertical-align: bottom;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.appear {
+  animation: fadeIn 2s ease 0s 1 normal;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0.2
+  }
+
+  100% {
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+      opacity: 0.2
+  }
+
+  100% {
+      opacity: 1
+  }
+}
+
+.slider i.fas {
+  color: rgba(25, 25, 25, 0.7);
+  font-size: 2.5em;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+}
+
+.slider i.fa-arrow-circle-right {
+  right: 2%;
+}
+
+.slider i.fa-arrow-circle-left {
+  left: 2%;
+}
+
+.thumbnail ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.thumbnail ul li {
+  margin: 10px 0;
+  width: 23.5%;
+  margin-right: 2%;
+  cursor: pointer;
+  -webkit-filter: grayscale(90%);
+  filter: grayscale(90%);
+}
+
+.thumbnail ul li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.thumbnail ul li:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.thumbnail ul li.selected {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.thumbnail ul li img {
+  width: 100%;
+}
+
+
+.box18{
+  margin:2em 0;
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px #ffcb8a;
+  border-radius: 3px 0 3px 0;
+  background-color: white;
+}
+.box18:before,.box18:after
+{
+  content: '';
+  position: absolute;
+  width:10px;
+  height: 10px;
+  border: solid 2px #ffcb8a;
+  border-radius: 50%;
+}
+.box18:after {
+  top:-12px;
+  left:-12px;
+}
+.box18:before {
+  bottom:-12px;
+  right:-12px;
+}
+.box18 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.like-btn {
+  color: #8899a6;
+}
+
+
+.like-btn-unlike {
+  color: #ff2581;
+}
+
+
+.tweets-show-item .fa {
+  z-index: 5;
+  font-size: 18px;
+  margin-right: 3px;
+}
+
+.wrench {
+  animation: wrench_7909 3.875s ease infinite;
+  transform-origin: 90% 35%;
+}
+
+.tada {
+  animation: tada_3743 4.6s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes tada_3743 {
+  0% { transform: scale(1) }
+  4.34783% { transform:scale(.9) rotate(-8deg) }
+  8.69565% { transform:scale(.9) rotate(-8deg) }
+  13.04348% { transform:scale(1.3) rotate(8deg) }
+  17.3913% { transform:scale(1.3) rotate(-8deg) }
+  21.73913% { transform:scale(1.3) rotate(8deg) }
+  26.08696% { transform:scale(1.3) rotate(-8deg) }
+  30.43478% { transform:scale(1.3) rotate(8deg) }
+  34.78261% { transform:scale(1) rotate(0) }
+  100% { transform:scale(1) rotate(0) }
 }
