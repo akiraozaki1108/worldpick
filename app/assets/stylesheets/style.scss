@@ -224,8 +224,14 @@ div.contents.row {
   .new_user{
   font-family: "游ゴシック", "YuGothic";
   }
+  .post-title {
+    color: $dark;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 10px;
+  }
   div.content_post {
-    @include boxBase(20px 0 ,30px);
+    @include boxBase( 0 ,30px);
     position: relative;
     height: 400px;
     color: #fff;
