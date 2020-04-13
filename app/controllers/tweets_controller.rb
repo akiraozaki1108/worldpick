@@ -3,6 +3,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    @likes_count = Like.where(tweet_id: @tweet.id).count
   end
 
   def new
