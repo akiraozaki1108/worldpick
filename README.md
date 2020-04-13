@@ -1,33 +1,15 @@
-・アプリ名
-WorldPick
+# README
 
-・概要
-ツイート、いいね機能、コメント機能、
-・本番環境
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-デプロイ先
-https://worldpick.herokuapp.com/
+Things you may want to cover:
 
-テストアカウント
-ID: test@test
-PW: testtest
-・制作背景
+* Ruby version
 
-海外で一人旅をする中、写真をいくつも撮りました。 写真と感情を一緒に保存できるようなアプリを作りたいと思った為見てもらうよりも、その時の感情を保存するためのアプリです。
+* System dependencies
 
-・DEMO
-
-https://gyazo.com/44a456b91f14001db36b1c4f9a8e49e6
-
-・工夫したポイント
-
-・使用技術
-HTML,CSS,JavaScript
-
-・課題や今後実装したい機能
-国事のタグ付機能実装
-
-・DB設計
+* Configuration
 
 * Database creation
 

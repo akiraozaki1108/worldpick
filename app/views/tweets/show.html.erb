@@ -27,7 +27,7 @@
         <%= link_to("/likes/#{@tweet.id}/destroy", {method: "post"}) do %>
         <span class="fa fa-heart like-btn-unlike"></span>
           <% end %>
-       <% else %>
+      <% else %>
         <%= link_to("/likes/#{@tweet.id}/create", {method: "post"}) do %>
           <span class="fa fa-heart like-btn"></span>
         <% end %>
