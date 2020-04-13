@@ -13,7 +13,7 @@ WorldPick
   
 
   テストアカウント
-  ID: test@test
+  ID: test@gmail.com
   PW: testtest
 
 
