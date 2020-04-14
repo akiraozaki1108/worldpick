@@ -38,9 +38,6 @@ HTML,CSS,JavaScript
 
   国事のタグ付機能実装
 
-・DB設計
-
-* Database creation
 
 World picks  DB設計
 ## tweetsテーブル
