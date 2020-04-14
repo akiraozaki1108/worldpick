@@ -12,6 +12,7 @@ class TweetsController < ApplicationController
   def create
     # @tweet = Tweet.new(tweet_params)
     Tweet.create(tweet_params)
+    
     # if @tweet.save
     #   redirect_to tweets_path action: :post
     # else
