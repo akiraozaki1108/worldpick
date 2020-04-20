@@ -224,12 +224,12 @@ div.contents.row {
   .new_user{
   font-family: "游ゴシック", "YuGothic";
   }
-  .post-title {
-    color: $dark;
-    text-align: center;
-    font-size: 28px;
-    margin-top: 10px;
-  }
+  // .post-title {
+  //   color: $dark;
+  //   text-align: center;
+  //   font-size: 28px;
+  //   margin-top: 10px;
+  // }
   div.content_post {
     @include boxBase( 0 ,30px);
     position: relative;
@@ -250,6 +250,12 @@ div.contents.row {
       @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
       z-index: 1;
       border-radius: 3px;
+    }
+    .post-title {
+      color: $dark;
+      text-align: center;
+      font-size: 28px;
+      margin-top: 10px;
     }
     .more {
       position: absolute;
